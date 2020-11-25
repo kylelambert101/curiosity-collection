@@ -1,20 +1,33 @@
 import { Stack } from "@fluentui/react/lib/Stack";
 import * as React from "react";
-import EntryStack from "./EntryStack";
+import EntryCardStack from "./EntryCardStack";
+import EntryData from "./model/EntryData";
 import EntryDataGroup from "./model/EntryDataGroup";
+import { TaxonomyLevel } from "./model/Taxonomy";
 
 interface GroupedCollectionProps {
-  entryDataGroups: EntryDataGroup[];
+  entries: EntryData[];
+  groupLevel: TaxonomyLevel;
 }
 
 const GroupedCollection = (
   props: GroupedCollectionProps
 ): React.ReactElement => {
-  const { entryDataGroups: groups } = props;
+  const { entries, groupLevel } = props;
+
+  // Get unique entry values for that group and bundle associated entries
+  const groups: EntryDataGroup[] = entries
+    .map((e) => e.taxonomy[groupLevel])
+    .filter((value, index, self) => self.indexOf(value) === index)
+    .map((g) => ({
+      groupName: g || "Not Specified",
+      entries: entries.filter((e) => e.taxonomy[groupLevel] === g),
+    }));
+
   return (
     <Stack tokens={{ childrenGap: 10 }}>
       {groups.map((g) => (
-        <EntryStack entries={g.entries} header={g.groupName} />
+        <EntryCardStack entries={g.entries} header={g.groupName} />
       ))}
     </Stack>
   );
