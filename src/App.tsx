@@ -1,6 +1,15 @@
+import * as React from "react";
+import {
+  Dropdown,
+  getId,
+  IDropdownOption,
+  Label,
+  Stack,
+} from "@fluentui/react";
 import "./App.css";
 import GroupedCollection from "./collection/GroupedCollection";
 import EntryData from "./collection/model/EntryData";
+import { TaxonomyLevel, TaxonomyLevels } from "./collection/model/Taxonomy";
 
 function App() {
   const dummyEntryData: EntryData[] = [
@@ -65,7 +74,36 @@ function App() {
       },
     },
   ];
-  return <GroupedCollection entries={dummyEntryData} groupLevel="class" />;
+
+  const [selectedItem, setSelectedItem] = React.useState<IDropdownOption>();
+
+  const onChange = (
+    event: React.FormEvent<HTMLDivElement>,
+    item?: IDropdownOption
+  ): void => {
+    setSelectedItem(item);
+  };
+
+  const levelDropdownId = getId("levelDropdown");
+
+  return (
+    <>
+      <Stack horizontal tokens={{ childrenGap: 10 }}>
+        <Label htmlFor={levelDropdownId}>Grouping Level:</Label>
+        <Dropdown
+          key={levelDropdownId}
+          selectedKey={selectedItem ? selectedItem.key : undefined}
+          options={TaxonomyLevels.map((level) => ({ key: level, text: level }))}
+          style={{ width: 300 }}
+          onChange={onChange}
+        />
+      </Stack>
+      <GroupedCollection
+        entries={dummyEntryData}
+        groupLevel={(selectedItem?.text || "kingdom") as TaxonomyLevel}
+      />
+    </>
+  );
 }
 
 export default App;
