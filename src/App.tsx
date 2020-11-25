@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import GroupedCollection from "./collection/GroupedCollection";
+import EntryDataGroup from "./collection/model/EntryDataGroup";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const dummyEntryData: EntryDataGroup[] = [
+    {
+      groupName: "Arachnids",
+      entries: [{ name: "Spider" }, { name: "Scorpion" }],
+    },
+    { groupName: "Birds", entries: [{ name: "Hawk" }, { name: "Bluejay" }] },
+    { groupName: "Reptiles", entries: [{ name: "Turtle" }] },
+  ];
+  return <GroupedCollection entryDataGroups={dummyEntryData} />;
 }
 
 export default App;
