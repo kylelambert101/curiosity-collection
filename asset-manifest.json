@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/curiosity-collection/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/curiosity-collection/static/js/main.bf763e98.chunk.js",
-    "main.js.map": "/curiosity-collection/static/js/main.bf763e98.chunk.js.map",
-    "runtime-main.js": "/curiosity-collection/static/js/runtime-main.28d79eab.js",
-    "runtime-main.js.map": "/curiosity-collection/static/js/runtime-main.28d79eab.js.map",
-    "static/js/2.aefbf2fc.chunk.js": "/curiosity-collection/static/js/2.aefbf2fc.chunk.js",
-    "static/js/2.aefbf2fc.chunk.js.map": "/curiosity-collection/static/js/2.aefbf2fc.chunk.js.map",
-    "static/js/3.20fa504f.chunk.js": "/curiosity-collection/static/js/3.20fa504f.chunk.js",
-    "static/js/3.20fa504f.chunk.js.map": "/curiosity-collection/static/js/3.20fa504f.chunk.js.map",
+    "main.css": "/curiosity-collection/static/css/main.7d180cbf.chunk.css",
+    "main.js": "/curiosity-collection/static/js/main.d71fdf69.chunk.js",
+    "main.js.map": "/curiosity-collection/static/js/main.d71fdf69.chunk.js.map",
+    "runtime-main.js": "/curiosity-collection/static/js/runtime-main.39e207da.js",
+    "runtime-main.js.map": "/curiosity-collection/static/js/runtime-main.39e207da.js.map",
+    "static/js/2.953a8895.chunk.js": "/curiosity-collection/static/js/2.953a8895.chunk.js",
+    "static/js/2.953a8895.chunk.js.map": "/curiosity-collection/static/js/2.953a8895.chunk.js.map",
+    "static/js/3.1a1d7860.chunk.js": "/curiosity-collection/static/js/3.1a1d7860.chunk.js",
+    "static/js/3.1a1d7860.chunk.js.map": "/curiosity-collection/static/js/3.1a1d7860.chunk.js.map",
     "index.html": "/curiosity-collection/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/curiosity-collection/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.aefbf2fc.chunk.js.LICENSE.txt": "/curiosity-collection/static/js/2.aefbf2fc.chunk.js.LICENSE.txt"
+    "static/css/main.7d180cbf.chunk.css.map": "/curiosity-collection/static/css/main.7d180cbf.chunk.css.map",
+    "static/js/2.953a8895.chunk.js.LICENSE.txt": "/curiosity-collection/static/js/2.953a8895.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.28d79eab.js",
-    "static/js/2.aefbf2fc.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.bf763e98.chunk.js"
+    "static/js/runtime-main.39e207da.js",
+    "static/js/2.953a8895.chunk.js",
+    "static/css/main.7d180cbf.chunk.css",
+    "static/js/main.d71fdf69.chunk.js"
   ]
 }
