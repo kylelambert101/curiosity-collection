@@ -12,7 +12,7 @@ export type TaxonomyLevel = keyof Taxonomy;
 
 // There may be a better way to automatically sync this with the keys of
 // Taxonomy above, but this will work for now.
-export const TaxonomyLevels = [
+export const TaxonomyLevels: TaxonomyLevel[] = [
   "kingdom",
   "phylum",
   "class",

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Card } from "@uifabric/react-cards";
 import { FontWeights, Image, Text, ITextStyles } from "@fluentui/react";
-import EntryData from "./model/EntryData";
+import EntryData from "../model/EntryData";
 
 interface EntryCardProps {
   entry: EntryData;

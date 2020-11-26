@@ -7,9 +7,10 @@ import {
   Stack,
 } from "@fluentui/react";
 import "./App.css";
-import GroupedCollection from "./collection/GroupedCollection";
+import GroupedCollection from "./collection/display/GroupedCollection";
 import EntryData from "./collection/model/EntryData";
 import { TaxonomyLevel, TaxonomyLevels } from "./collection/model/Taxonomy";
+import GroupLevelSlider from "./collection/controls/GroupLevelSlider";
 
 function App() {
   const dummyEntryData: EntryData[] = [
@@ -75,32 +76,22 @@ function App() {
     },
   ];
 
-  const [selectedItem, setSelectedItem] = React.useState<IDropdownOption>();
-
-  const onChange = (
-    event: React.FormEvent<HTMLDivElement>,
-    item?: IDropdownOption
-  ): void => {
-    setSelectedItem(item);
-  };
-
-  const levelDropdownId = getId("levelDropdown");
+  const [
+    selectedGroupLevel,
+    setSelectedGroupLevel,
+  ] = React.useState<TaxonomyLevel>("kingdom");
 
   return (
     <>
       <Stack horizontal tokens={{ childrenGap: 10 }}>
-        <Label htmlFor={levelDropdownId}>Grouping Level:</Label>
-        <Dropdown
-          key={levelDropdownId}
-          selectedKey={selectedItem ? selectedItem.key : undefined}
-          options={TaxonomyLevels.map((level) => ({ key: level, text: level }))}
-          style={{ width: 300 }}
-          onChange={onChange}
+        <GroupLevelSlider
+          selectedLevel={selectedGroupLevel}
+          setSelectedLevel={setSelectedGroupLevel}
         />
       </Stack>
       <GroupedCollection
         entries={dummyEntryData}
-        groupLevel={(selectedItem?.text || "kingdom") as TaxonomyLevel}
+        groupLevel={selectedGroupLevel}
       />
     </>
   );

@@ -1,6 +1,6 @@
 import * as React from "react";
 import EntryCard from "./EntryCard";
-import EntryData from "./model/EntryData";
+import EntryData from "../model/EntryData";
 import { Stack } from "@fluentui/react/lib/Stack";
 
 interface EntryCardStackProps {

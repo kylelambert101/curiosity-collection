@@ -1,9 +1,9 @@
 import { Stack } from "@fluentui/react/lib/Stack";
 import * as React from "react";
 import EntryCardStack from "./EntryCardStack";
-import EntryData from "./model/EntryData";
-import EntryDataGroup from "./model/EntryDataGroup";
-import { TaxonomyLevel } from "./model/Taxonomy";
+import EntryData from "../model/EntryData";
+import EntryDataGroup from "../model/EntryDataGroup";
+import { TaxonomyLevel } from "../model/Taxonomy";
 
 interface GroupedCollectionProps {
   entries: EntryData[];
