@@ -27,7 +27,10 @@ const GroupedCollection = (
   return (
     <Stack tokens={{ childrenGap: 10 }}>
       {groups.map((g) => (
-        <EntryCardStack entries={g.entries} header={g.groupName} />
+        <EntryCardStack
+          entries={g.entries}
+          groupLevel={{ value: g.groupName, level: groupLevel }}
+        />
       ))}
     </Stack>
   );
