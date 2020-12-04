@@ -1,15 +1,9 @@
 import * as React from "react";
-import {
-  Dropdown,
-  getId,
-  IDropdownOption,
-  Label,
-  Stack,
-} from "@fluentui/react";
+import { Stack } from "@fluentui/react";
 import "./App.css";
 import GroupedCollection from "./collection/display/GroupedCollection";
 import EntryData from "./collection/model/EntryData";
-import { TaxonomyLevel, TaxonomyLevels } from "./collection/model/Taxonomy";
+import { TaxonomyLevel } from "./collection/model/Taxonomy";
 import GroupLevelSlider from "./collection/controls/GroupLevelSlider";
 
 function App() {

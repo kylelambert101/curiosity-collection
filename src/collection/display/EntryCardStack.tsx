@@ -2,7 +2,7 @@ import * as React from "react";
 import EntryCard from "./EntryCard";
 import EntryData from "../model/EntryData";
 import { Stack } from "@fluentui/react/lib/Stack";
-import { FontWeights, Image, Text, ITextStyles } from "@fluentui/react";
+import { Text } from "@fluentui/react";
 import { TaxonomyLevel, TaxonomyLevels } from "../model/Taxonomy";
 
 interface EntryCardStackProps {
